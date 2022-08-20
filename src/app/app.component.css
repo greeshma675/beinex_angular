@@ -34,8 +34,77 @@
     font-weight: bold;
     animation: .4s ease-out turn_in reverse; 
   }
+  #div_p1 {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: conic-gradient(green var(--progress), gray 0deg);
+    font-size: 0;
+    font-weight: bold;
+    animation: .4s ease-out turn_in reverse; 
+  }
+  #div_p2 {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: conic-gradient(yellow var(--progress), gray 0deg);
+    font-size: 0;
+    font-weight: bold;
+    animation: .4s ease-out turn_in reverse; 
+  }
+  #div_p3 {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: conic-gradient(darkgreen var(--progress), gray 0deg);
+    font-size: 0;
+    font-weight: bold;
+    animation: .4s ease-out turn_in reverse; 
+  }
   
   #div_p::after {
+    content: attr(data-progress);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 5px;
+    border-radius: 50%;
+    background: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+  #div_p1::after {
+    content: attr(data-progress);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 5px;
+    border-radius: 50%;
+    background: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+  #div_p2::after {
+    content: attr(data-progress);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 5px;
+    border-radius: 50%;
+    background: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+  }
+  #div_p3::after {
     content: attr(data-progress);
     display: flex;
     justify-content: center;
@@ -57,7 +126,7 @@
       background: conic-gradient(red calc(var(--progress) * .9), gray 0deg);
     }
     14% {
-      background: conic-gradient(red calc(var(--progress) * .85), gray 0deg);
+      background: conic-gradient(green calc(var(--progress) * .85), gray 0deg);
     }
     20% {
       background: conic-gradient(red calc(var(--progress) * .8), gray 0deg);
@@ -80,8 +149,8 @@
     50% {
       background: conic-gradient(red calc(var(--progress) * .5), gray 0deg);
     }
-    55% {
-      background: conic-gradient(red calc(var(--progress) * .45), gray 0deg);
+    54% {
+      background: conic-gradient(green calc(var(--progress) * .45), gray 0deg);
     }
     60% {
       background: conic-gradient(red calc(var(--progress) * .4), gray 0deg);
@@ -110,4 +179,56 @@
   100% {
       background: conic-gradient(gray 0deg);
     }
+  }
+  @media (min-width: 991.98px) {
+    main {
+      padding-left: 240px;
+    }
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    padding: 50px 0 0; /* Height of navbar */
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+    width: 80px;
+    z-index: 600;
+  }
+  
+  @media (max-width: 991.98px) {
+    .sidebar {
+      width: 100%;
+    }
+  }
+  .sidebar .active {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+  }
+  
+  .sidebar-sticky {
+    position: relative;
+    top: 0;
+    height: calc(100vh - 48px);
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  }
+  .pie {
+    margin: 20px;
+  }
+  
+  .pie text {
+    font-family: "Verdana";
+    fill: #888;
+  }
+  
+  .pie .name-text{
+    font-size: 1em;
+  }
+  
+  .pie .value-text{
+    font-size: 3em;
   }

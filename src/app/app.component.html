@@ -5,6 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+
+ 
+  <script src="https://d3js.org/d3.v4.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -12,6 +15,45 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <body>
+ <!--Main Navigation-->
+<header>
+  <!-- Sidebar -->
+  <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+    <div class="position-sticky">
+      <div class="list-group list-group-flush mx-3" style="margin-top: -40px;">
+        <a
+          href="#"
+          class="list-group-item list-group-item-action py-2 ripple"
+          aria-current="true"
+        >
+        <i class="fa fa-bars fa-fw me-3" style="color:#285967;"aria-hidden="true" ></i>
+        </a>
+           <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fa fa-home fa-fw me-3  mt-4" style="color:#285967; "></i></a
+        >
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+        
+          ><i class="fa fa-briefcase fa-fw me-3 mt-4" style="color:#285967;"></i></a
+        >
+        <a href="#" class="list-group-item list-group-item-action py-2 ripple"
+          ><i class="fa fa-calendar fa-fw me-3 mt-4" style="color:#285967;"></i></a
+        >
+      </div>
+    </div>
+  </nav>
+  
+</header>
+<!--Main Navigation-->
+
+<!--Main layout-->
+<!-- <main style="margin-top: 5px;">
+  <div class="container pt-4"></div>
+</main> -->
+<!--Main layout-->
+
+
+
+
   <div>
     <nav class="navbar bg-light">
       <div class="container-fluid">
@@ -47,7 +89,7 @@
           <div id="div2">
             <i class="fa fa-ellipsis-h" style="float:right;margin-right:5px;color:#c2cdcc" aria-hidden="true"></i><br>
         <div style="display: flex;"> 
-          <div id="div_p" data-progress="14" style="--progress: 54%; margin-left:10px;"></div>
+          <div id="div_p1" data-progress="14" style="--progress: 54%; margin-left:10px;"></div>
           <label for="" style="font-size: 12px;margin-left:10px;color: #96afac;margin-top: 10px;">Number of tasks on track</label>
         </div>      
         <label for="" style="color:#c2cdcc;margin-left: 20px;font-size: 10px;">54%</label>
@@ -60,7 +102,7 @@
           <div id="div2">
             <i class="fa fa-ellipsis-h" style="float:right;margin-right:5px;color:#c2cdcc" aria-hidden="true"></i><br>
         <div style="display: flex;"> 
-          <div id="div_p" data-progress="8" style="--progress: 54%; margin-left:10px;"></div>
+          <div id="div_p2" data-progress="8" style="--progress: 54%; margin-left:10px;"></div>
           <label for="" style="font-size: 12px;margin-left:10px;color: #96afac;margin-top: 10px;">Number of tasks delayed</label>
         </div>      
         <label for="" style="color:#c2cdcc;margin-left: 20px;font-size: 10px;">30%</label>
@@ -86,7 +128,7 @@
           <div id="div2">
             <i class="fa fa-ellipsis-h" style="float:right;margin-right:5px;color:#c2cdcc" aria-hidden="true"></i><br>
         <div style="display: flex;"> 
-          <div id="div_p" data-progress="19" style="--progress: 54%; margin-left:10px;"></div>
+          <div id="div_p3" data-progress="19" style="--progress: 54%; margin-left:10px;"></div>
           <label for="" style="font-size: 12px;margin-left:10px;color: #96afac;margin-top: 10px;">Number of tasks completed</label>
         </div>      
         <label for="" style="color:#c2cdcc;margin-left: 20px;font-size: 10px;">19%</label>
@@ -109,6 +151,24 @@
       
   </div> -->
   
+
+<!-- last segment -->
+
+<div class="container row">
+  <div class="col-4">
+    <h6 style="margin-left:90px;margin-top:15px">Task Distribution</h6>
+    
+  </div>
+  <div class="col-4">
+    <h6 style="margin-top:15px">Tasks by Beinex Sectors</h6>
+    <div id="canvas-holder">
+      <canvas id="chart-area"></canvas>
+    </div>
+  </div>
+  <div class="col-4">
+    <h6 style="margin-top:15px">Tasks by Aurra</h6>
+  </div>
+</div>
 </body>
-<script src="./dummy.js"></script>
+
 </html>
